@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm:start",
+      "type": "npm",
+      "script": "start",
+      "options": {
+        "env": {
+          "NODE_OPTIONS": "--openssl-legacy-provider"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "npm:build",
+      "type": "npm",
+      "script": "build",
+      "options": {
+        "env": {
+          "NODE_OPTIONS": "--openssl-legacy-provider"
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}
