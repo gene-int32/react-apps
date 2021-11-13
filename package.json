@@ -2,6 +2,18 @@
   "name": "react-apps",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettier": "prettier -cu src",
+    "prettier:fix": "prettier -wu src",
+    "lint": "eslint --quiet src/**/*.tsx",
+    "lint:fix": "eslint --fix src/**/*.tsx",
+    "stylelint": "stylelint --quiet src/**/*.{css,scss}",
+    "stylelint:fix": "stylelint --fix src/**/*.{css,scss}"
+  },
   "dependencies": {
     "normalize.css": "^8.0.1"
   },
@@ -30,18 +42,6 @@
     "stylelint-order": "^5.0.0",
     "typescript": "^4.4.4",
     "web-vitals": "^1.1.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prettier": "prettier -cu src",
-    "prettier:fix": "prettier -wu src",
-    "lint": "eslint --quiet src/**/*.tsx",
-    "lint:fix": "eslint --fix src/**/*.tsx",
-    "stylelint": "stylelint -q src/**/*.{css,scss}",
-    "stylelint:fix": "stylelint --fix src/**/*.{css,scss}"
   },
   "prettier": {
     "arrowParens": "always",
