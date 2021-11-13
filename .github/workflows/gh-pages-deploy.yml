@@ -1,4 +1,4 @@
-name: GitHub Pages deploy
+name: Deploy to GitHub Pages
 
 on:
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
           npm run build
 
       # Deploy
-      - name: 'Deploy to GitHub Pages'
+      - name: 'Deploy'
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
