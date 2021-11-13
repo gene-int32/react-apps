@@ -1,7 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   build:
@@ -22,11 +25,11 @@ jobs:
         run: npm ci
 
       # Run tests
-      - name: 'Testing'
+      - name: 'Run tests'
         run: npm run test
 
-      # Code linting
-      - name: 'Code linting'
+      # Run linters
+      - name: 'Code quality'
         run: |
           npm run prettier
           npm run lint
