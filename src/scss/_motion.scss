@@ -1,0 +1,8 @@
+$standard-curve-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$acceleration-curve-timing-function: cubic-bezier(0.4, 0, 1, 1);
+$deceleration-curve-timing-function: cubic-bezier(0, 0, 0.2, 1);
+$duration: 200ms;
+
+@mixin transition($propery, $duration: $duration) {
+  transition: $propery $duration $standard-curve-timing-function;
+}

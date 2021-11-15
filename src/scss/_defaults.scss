@@ -1,0 +1,17 @@
+/* Spacing */
+$base: 8px;
+$increment: $base * 3;
+$padding: $base * 2;
+$gutter: $base * 4;
+$margin: $base * 4;
+
+/* Colors */
+$white: #fff;
+$black: #000;
+
+/* Shape */
+$border-radius: 4px;
+
+@mixin rounded($radius: $border-radius) {
+  border-radius: $radius;
+}

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+$type-base: 4px;
+$type-root-size: 16;
+$type-tracking: 0.625;
+$type-leading: 1.5;
+$type-headline-leading: 1.15;
+$light: 300;
+$regular: 400;
+$medium: 600;
+$bold: 700;
+
+@mixin type($size, $weight, $leading, $tracking: $type-tracking) {
+  font-weight: $weight;
+  font-size: #{$size / $type-root-size}rem;
+  line-height: #{$size / $type-root-size * $leading}rem;
+  letter-spacing: #{$tracking / $size}rem;
+}
+
+@mixin headline-1 {
+  @include type(102, $light, $type-headline-leading, -$type-tracking);
+}
+
+@mixin headline-2 {
+  @include type(64, $light, $type-headline-leading, -$type-tracking);
+}
+
+@mixin headline-3 {
+  @include type(51, $regular, $type-headline-leading);
+}
+
+@mixin headline-4 {
+  @include type(36, $regular, $type-headline-leading);
+}
+
+@mixin headline-5 {
+  @include type(25, $regular, $type-headline-leading);
+}
+
+@mixin headline-6 {
+  @include type(21, $medium, $type-headline-leading);
+}
+
+@mixin subtitle-1 {
+  @include type(17, $regular, $type-headline-leading);
+}
+
+@mixin subtitle-2 {
+  @include type(15, $medium, $type-leading);
+}
+
+@mixin body-1 {
+  @include type(17, $regular, $type-leading);
+}
+
+@mixin body-2 {
+  @include type(15, $regular, $type-leading);
+}
+
+@mixin button {
+  @include type(15, $medium, $type-leading);
+
+  text-transform: uppercase;
+}
+
+@mixin caption {
+  @include type(13, $regular, $type-leading);
+}
+
+@mixin overline {
+  @include type(11, $regular, $type-leading);
+
+  text-transform: uppercase;
+}
+
+html {
+  font-size: #{$type-root-size}px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.headline-1 {
+  @include headline-1;
+}
+
+.headline-2 {
+  @include headline-2;
+}
+
+.headline-3 {
+  @include headline-3;
+}
+
+.headline-4 {
+  @include headline-4;
+}
+
+.headline-5 {
+  @include headline-5;
+}
+
+.headline-6 {
+  @include headline-6;
+}
+
+.subtitle-1 {
+  @include subtitle-1;
+}
+
+.subtitle-2 {
+  @include subtitle-2;
+}
+
+.body-1 {
+  @include body-1;
+}
+
+.body-2 {
+  @include body-2;
+}
+
+.button {
+  @include button;
+}
+
+.caption {
+  @include caption;
+}
+
+.overline {
+  @include overline;
+}
