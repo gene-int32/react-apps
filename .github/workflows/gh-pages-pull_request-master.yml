@@ -1,8 +1,6 @@
-name: Deploy to GitHub Pages
+name: Pull Request to master
 
 on:
-  push:
-    branches: [master]
   pull_request:
     branches: [master]
 
@@ -34,19 +32,3 @@ jobs:
           npm run prettier
           npm run lint
           npm run stylelint
-
-      # Build
-      - name: 'Build'
-        run: |
-          export PUBLIC_URL=/react-apps
-          npm run build
-
-      # Deploy
-      - name: 'Deploy'
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

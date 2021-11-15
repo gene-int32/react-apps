@@ -1,0 +1,50 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - uses: actions/checkout@v2
+
+      # Setup node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'npm'
+
+      # Run npm install
+      - name: 'Install'
+        run: npm ci
+
+      # Run tests
+      - name: 'Run tests'
+        run: npm run test
+
+      # Run linters
+      - name: 'Code quality'
+        run: |
+          npm run prettier
+          npm run lint
+          npm run stylelint
+
+      # Build
+      - name: 'Build'
+        run: |
+          export PUBLIC_URL=/react-apps
+          npm run build
+
+      # Deploy
+      - name: 'Deploy'
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
