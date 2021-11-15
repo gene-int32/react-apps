@@ -86,7 +86,11 @@
       "stylelint-config-rational-order",
       "stylelint-config-prettier"
     ],
-    "rules": {}
+    "rules": {
+      "color-function-notation": "legacy",
+      "alpha-value-notation": "number",
+      "scss/no-global-function-names": null
+    }
   },
   "browserslist": {
     "production": [
