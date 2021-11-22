@@ -1,1 +1,1 @@
-export * from './app-data';
+export * from './awesome-app';

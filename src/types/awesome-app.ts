@@ -1,4 +1,4 @@
-export interface AppData {
+export interface AwesomeApp {
   componentName: string;
   dirName: string;
   imgSrc: string;

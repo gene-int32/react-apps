@@ -2,7 +2,7 @@ import {resolve} from 'path';
 import {promises} from 'fs';
 import puppeteer, {Page} from 'puppeteer';
 
-import {AppData} from '../src/types';
+import {AwesomeApp} from '../src/types';
 
 /**
  * Path resolve helper.
@@ -67,7 +67,7 @@ const takeScreenshot = async (page: Page, url: string, fileName: string) => {
 };
 
 (async () => {
-  const data: AppData[] = [];
+  const data: AwesomeApp[] = [];
 
   // Read directory entries.
   const dirents = await promises.readdir(scanDir, {withFileTypes: true});
