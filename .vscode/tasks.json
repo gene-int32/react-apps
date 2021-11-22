@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "npm:start",
+      "label": "start",
       "type": "npm",
       "script": "start",
       "options": {
@@ -13,7 +13,7 @@
       "problemMatcher": []
     },
     {
-      "label": "npm:build",
+      "label": "build",
       "type": "npm",
       "script": "build",
       "options": {

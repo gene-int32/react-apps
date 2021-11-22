@@ -17,7 +17,7 @@ const {HOST} = process.env;
 /**
  * Output data file name.
  */
-const outputJsonFile = root('src', 'app-data.json');
+const outputJsonFile = root('src', 'awesome-apps.json');
 
 /**
  * Root directory to scan.
@@ -98,7 +98,7 @@ const takeScreenshot = async (page: Page, url: string, fileName: string) => {
     // Take screenshots.
     for await (const [i, d] of data.entries()) {
       const {dirName} = d;
-      const imgSrc = `assets/apps/${dirName}.png`;
+      const imgSrc = `assets/awesome-apps/${dirName}.png`;
       const url = getAppUrl(dirName);
 
       if (await takeScreenshot(page, url, root('public', imgSrc))) {

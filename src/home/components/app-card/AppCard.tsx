@@ -1,10 +1,11 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 
-import {AppData} from '../../../types';
+import {AwesomeApp} from '../../../types';
+
 import './AppCard.scss';
 
-type AppCardProps = AppData;
+type AppCardProps = AwesomeApp;
 
 const AppCard = ({title, imgSrc, location}: AppCardProps) => {
   const navigate = useNavigate();
