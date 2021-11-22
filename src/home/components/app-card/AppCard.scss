@@ -1,0 +1,37 @@
+@import 'defaults';
+
+.app-card {
+  $self: &;
+
+  @include rounded;
+  @include elevation-transition(1);
+
+  overflow: hidden;
+  background-color: $white;
+  cursor: pointer;
+
+  &:hover {
+    @include elevation(5);
+
+    #{$self}__cover {
+      filter: grayscale(0);
+    }
+  }
+
+  &__cover {
+    padding: $padding $padding 0;
+    filter: grayscale(1);
+  }
+
+  &__img {
+    @include rounded;
+
+    width: 100%;
+    height: $increment * 12;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: $padding;
+  }
+}

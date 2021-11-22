@@ -1,0 +1,7 @@
+@import 'defaults';
+
+.app-list {
+  display: grid;
+  grid-gap: $gutter;
+  grid-template: auto / repeat(3, 1fr);
+}
