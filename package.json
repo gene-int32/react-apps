@@ -12,10 +12,14 @@
     "lint": "eslint --quiet src/**/*.tsx",
     "lint:fix": "eslint --fix src/**/*.tsx",
     "stylelint": "stylelint --quiet src/**/*.{css,scss}",
-    "stylelint:fix": "stylelint --fix src/**/*.{css,scss}"
+    "stylelint:fix": "stylelint --fix src/**/*.{css,scss}",
+    "ci:checks": "CI=true npm test && npm run prettier && npm run lint && npm run stylelint",
+    "utils:install": "npm i --no-save ts-node puppeteer",
+    "utils:pick-apps": "HOST=http://localhost:3000 ts-node ./utils/pick-apps.ts"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "react-router-dom": "^6.0.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.0",
