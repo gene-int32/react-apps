@@ -1,6 +1,8 @@
 @import 'defaults';
 
 .home {
+  width: $base * 150;
+
   &__headline {
     margin: $padding * 7 0 $padding * 2;
     text-align: center;

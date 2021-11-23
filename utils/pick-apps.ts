@@ -2,7 +2,7 @@ import {resolve} from 'path';
 import {promises} from 'fs';
 import puppeteer, {Page} from 'puppeteer';
 
-import {AppData} from '../src/types';
+import {AwesomeApp} from '../src/types';
 
 /**
  * Path resolve helper.
@@ -17,7 +17,7 @@ const {HOST} = process.env;
 /**
  * Output data file name.
  */
-const outputJsonFile = root('src', 'app-data.json');
+const outputJsonFile = root('src', 'awesome-apps.json');
 
 /**
  * Root directory to scan.
@@ -67,7 +67,7 @@ const takeScreenshot = async (page: Page, url: string, fileName: string) => {
 };
 
 (async () => {
-  const data: AppData[] = [];
+  const data: AwesomeApp[] = [];
 
   // Read directory entries.
   const dirents = await promises.readdir(scanDir, {withFileTypes: true});
@@ -98,7 +98,7 @@ const takeScreenshot = async (page: Page, url: string, fileName: string) => {
     // Take screenshots.
     for await (const [i, d] of data.entries()) {
       const {dirName} = d;
-      const imgSrc = `assets/apps/${dirName}.png`;
+      const imgSrc = `assets/awesome-apps/${dirName}.png`;
       const url = getAppUrl(dirName);
 
       if (await takeScreenshot(page, url, root('public', imgSrc))) {

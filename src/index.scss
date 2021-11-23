@@ -2,14 +2,18 @@
 @import 'normalize';
 @import 'typo';
 
-body {
+.root-container {
   display: flex;
   justify-content: center;
-  color: #373758;
-  background-color: #f4f4ef;
+  height: 100%;
 }
 
-.container {
-  width: $base * 150;
+// Basic page wrapper
+.page {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
   height: 100%;
+  color: #373758;
+  background: #f4f4ef;
 }
