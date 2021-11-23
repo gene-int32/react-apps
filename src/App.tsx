@@ -25,9 +25,9 @@ const App = () => {
   return (
     <Suspense fallback={<></>}>
       <Routes>
-        <Route path="/" element={<Home apps={apps} />}></Route>
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home apps={apps} />}></Route>
         {lazyRoutes.map(({location, LazyComponent}, key) => (
-          <Route key={key} path={location} element={<LazyComponent />}></Route>
+          <Route key={key} path={`${process.env.PUBLIC_URL}/${location}`} element={<LazyComponent />}></Route>
         ))}
       </Routes>
     </Suspense>
