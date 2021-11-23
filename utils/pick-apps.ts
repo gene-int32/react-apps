@@ -51,7 +51,7 @@ const writeJson = async (data: unknown, fileName: string) => {
 /**
  * Resolve app location.
  */
-const getAppUrl = (path: string) => `${HOST}/${path}`;
+const getAppUrl = (path: string) => `${HOST}/#/${path}`;
 
 /**
  * Navigate to app location, take and save screenhot.
