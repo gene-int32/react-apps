@@ -1,0 +1,35 @@
+@import 'defaults';
+
+.page-birthdays-reminder {
+  align-items: center;
+  background: #68e4bc;
+}
+
+.birthdays-reminder {
+  .list {
+    @include rounded;
+    @include elevation(8);
+
+    padding: $padding * 2;
+    background-color: $white;
+
+    &__items {
+      margin: $padding * 2 0;
+    }
+
+    &__item {
+      margin: $padding 0;
+    }
+  }
+
+  .button {
+    @include rounded;
+
+    width: 100%;
+    height: $base * 6;
+    color: $white;
+    background-color: #68e4bc;
+    border: none;
+    cursor: pointer;
+  }
+}
