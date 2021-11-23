@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "componentName": "BirthdaysReminder",
+    "dirName": "001-birthdays-reminder",
+    "imgSrc": "assets/awesome-apps/001-birthdays-reminder.png",
+    "location": "001-birthdays-reminder",
+    "title": "Birthdays Reminder"
+  }
+]
