@@ -1,0 +1,28 @@
+@import 'defaults';
+
+.profile-preview {
+  display: flex;
+
+  &__photo {
+    @include rounded(50%);
+
+    width: $increment * 3;
+    height: $increment * 3;
+    margin-right: $padding;
+    object-fit: cover;
+  }
+
+  &__details {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  &__name {
+    margin-bottom: $base;
+  }
+
+  &__old {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
