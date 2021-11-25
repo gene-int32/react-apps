@@ -95,6 +95,8 @@ const takeScreenshot = async (page: Page, url: string, fileName: string) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
+    page.setViewport({width: 1280, height: 1024});
+
     // Take screenshots.
     for await (const [i, d] of data.entries()) {
       const {dirName} = d;

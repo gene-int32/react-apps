@@ -1,7 +1,9 @@
+import {Profile} from './profile.type';
+
 import profile_1 from './media/profile-1.jpeg';
 import profile_2 from './media/profile-2.jpeg';
 
-export default [
+const data: Profile[] = [
   {
     age: 26,
     name: 'Michele',
@@ -13,3 +15,5 @@ export default [
     photo: profile_2,
   },
 ];
+
+export default data;
