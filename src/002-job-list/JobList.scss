@@ -1,0 +1,81 @@
+@import 'defaults';
+
+.job-list-page {
+  background: #f3f3fb;
+}
+
+.job-list {
+  &__headline {
+    margin-top: $padding * 7;
+  }
+
+  &__toggle-all {
+    margin-bottom: $base;
+    color: #008ace;
+    text-align: right;
+    cursor: pointer;
+  }
+
+  &__item {
+    width: $increment * 32;
+    margin-bottom: $padding;
+  }
+}
+
+/* Position preview component */
+.position-preview {
+  @include rounded;
+  @include elevation-transition(1);
+
+  padding: $padding * 2;
+  background-color: $white;
+  cursor: pointer;
+
+  &:hover {
+    @include elevation(3);
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+  }
+
+  &__details {
+    @include transition(max-height);
+
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &__details-content {
+    padding-top: $padding;
+  }
+
+  &__chevron {
+    @include transition(transform);
+
+    margin-right: $padding;
+    color: #7bbbc6;
+  }
+
+  &__title {
+    flex: 0 1 $increment * 10;
+  }
+
+  &__subtitle {
+    flex: 0 1 $increment * 8;
+  }
+
+  &__location {
+    text-transform: uppercase;
+  }
+
+  /** Expanded */
+  &--expanded &__details {
+    max-height: $increment * 10;
+  }
+
+  &--expanded &__chevron {
+    transform: rotate(90deg);
+  }
+}

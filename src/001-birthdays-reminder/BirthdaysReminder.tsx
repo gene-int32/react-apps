@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import './BirthdaysReminder.scss';
 
-import data from './profiles.data';
+import './BirthdaysReminder.scss';
+import data from './data';
 import {Profile} from './profile.type';
 import ProfilePreview from './components/profile-preview/ProfilePreview';
 
