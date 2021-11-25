@@ -18,6 +18,7 @@
     "utils:pick-apps": "HOST=http://localhost:3000 ts-node ./utils/pick-apps.ts"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "normalize.css": "^8.0.1",
     "react-router-dom": "^6.0.2"
   },
