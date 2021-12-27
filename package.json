@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --production",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier -cu src",
@@ -40,7 +40,7 @@
     "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^4.0.3",
     "stylelint": "^14.0.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-rational-order": "^0.0.4",

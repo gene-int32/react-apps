@@ -32,3 +32,9 @@ jobs:
           npm run prettier
           npm run lint
           npm run stylelint
+
+      # Build
+      - name: 'Build'
+        run: |
+          export PUBLIC_URL=/react-apps
+          npm run build
