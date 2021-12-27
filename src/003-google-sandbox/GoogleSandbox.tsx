@@ -13,7 +13,7 @@ interface User {
 }
 
 /**
- * 
+ *
  * Auth component props.
  */
 interface AuthProps {
