@@ -22,7 +22,7 @@ interface AuthProps {
 }
 
 const GoogleClientConfig: gapi.auth2.ClientConfig = {
-  client_id: '581855884595-gmn8ht69i62oesoljho08cra6qjtl2hb.apps.googleusercontent.com',
+  client_id: '581855884595-ddjefr77cp7oaqqu5v2m63ieiq0urtjc.apps.googleusercontent.com',
   scope: 'openid profile email',
 };
 
