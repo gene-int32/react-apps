@@ -18,3 +18,9 @@ $border-radius: 4px;
 @mixin rounded($radius: $border-radius) {
   border-radius: $radius;
 }
+
+/* Effects */
+@mixin text-glow($color) {
+  color: $color;
+  text-shadow: 0 0 1px $color, 0 0 3px $color;
+}

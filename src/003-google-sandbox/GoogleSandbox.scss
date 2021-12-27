@@ -1,0 +1,85 @@
+@import 'defaults';
+
+.google-sandbox-page {
+  color: #f0a500;
+  background-color: #082032;
+}
+
+.google-sandbox {
+  width: $increment * 48;
+
+  &__headline {
+    margin-top: $padding;
+  }
+}
+
+.button {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &__inner {
+    @include rounded;
+    @include elevation-transition(5);
+
+    margin: $base / 2 0;
+    padding: 0 $padding;
+    color: #f0a500;
+    line-height: $base * 4;
+    background-color: #334756;
+
+    &:active {
+      @include elevation(1);
+    }
+  }
+
+  &__icon-left {
+    margin-right: $padding / 2;
+  }
+
+  &__icon-right {
+    margin-left: $padding / 2;
+  }
+}
+
+.box {
+  @include rounded;
+
+  padding: $padding;
+  background-color: #334756;
+}
+
+.preview {
+  @include text-glow(#f0a500);
+
+  overflow: hidden;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+}
+
+.list-item {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  .list-item {
+    margin-left: $padding;
+  }
+}
+
+.mt {
+  margin-top: $padding;
+}
+
+.mr {
+  margin-right: $padding;
+}
+
+.mb {
+  margin-bottom: $padding;
+}
+
+.ml {
+  margin-left: $padding;
+}
