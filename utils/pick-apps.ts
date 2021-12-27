@@ -66,6 +66,11 @@ const takeScreenshot = async (page: Page, url: string, fileName: string) => {
   }
 };
 
+/**
+ * Sleep helper function.
+ */
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 (async () => {
   const data: AwesomeApp[] = [];
 
@@ -109,6 +114,8 @@ const takeScreenshot = async (page: Page, url: string, fileName: string) => {
       } else {
         console.log(`Processing '${dirName}'...FAILD (please check: ${url})`);
       }
+      // Set timeout before next screen proccesing.
+      await sleep(400);
     }
 
     await browser.close();
