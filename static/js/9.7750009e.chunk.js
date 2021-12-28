@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-apps"]=this["webpackJsonpreact-apps"]||[]).push([[9,33,34],{28:function(e,a,t){"use strict";t.r(a);var p=t(48),i=t(49),s=[{age:26,name:"Michele",photo:p.default},{age:28,name:"Dave",photo:i.default}];a.default=s},48:function(e,a,t){"use strict";t.r(a),a.default=t.p+"static/media/profile-1.a3a02bba.jpeg"},49:function(e,a,t){"use strict";t.r(a),a.default=t.p+"static/media/profile-2.3e3c6d14.jpeg"}}]);
+//# sourceMappingURL=9.7750009e.chunk.js.map

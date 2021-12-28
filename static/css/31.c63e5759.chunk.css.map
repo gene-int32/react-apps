@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/scss/_normalize.scss"],"names":[],"mappings":"AAEA,EACE,qBAAsB,CACvB,kBAQC,QAAS","file":"31.c63e5759.chunk.css","sourcesContent":["@import 'normalize.css';\n\n* {\n  box-sizing: border-box;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0;\n}\n"]}
