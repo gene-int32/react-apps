@@ -67,11 +67,14 @@ const GoogleSandbox = () => {
 
   useEffect(() => {
     GoogleService.installGapi().then(async () => {
-      await GoogleService.load('client:auth2');
-      GoogleAuth = await gapi.auth2.init(GoogleClientConfig);
-
-      GoogleAuth.isSignedIn.listen(async (isSignedIn) => setIsSignedIn(isSignedIn));
-      setIsSignedIn(isAuthorized('profile'));
+      try {
+        await GoogleService.load('client:auth2');
+        GoogleAuth = await gapi.auth2.init(GoogleClientConfig);
+        GoogleAuth.isSignedIn.listen(async (isSignedIn) => setIsSignedIn(isSignedIn));
+        setIsSignedIn(isAuthorized('profile'));
+      } catch (err) {
+        preview(err);
+      }
     });
   }, []);
 
